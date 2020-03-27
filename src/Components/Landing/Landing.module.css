@@ -1,0 +1,83 @@
+@import "../../Theme/theme.css";
+
+.landing {
+  background-image: url("../../Assets/JPG/landingHealth.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.landingContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.landingSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.landingContent > .landingSide {
+  display: flex;
+  width: 50%;
+}
+
+.landingLeft {
+  display: flex;
+  background: rgb(0, 4, 40);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 4, 40, 1) 0%,
+    rgba(0, 78, 146, 1) 100%
+  );
+  opacity: 0.9;
+}
+
+.landingNavigator {
+  font-family: "Raleway-Bold";
+  font-size: 30px;
+  background-color: var(--main-color);
+
+  color: white;
+  padding: 10px;
+}
+
+.landingTitle {
+  color: white;
+  font-family: "Raleway-Bold";
+  font-size: 26px;
+  padding: 10px;
+}
+
+.landingSubtitle {
+  color: white;
+  font-family: "Raleway-SemiBold";
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+.landingDescription {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: var(--main-color);
+  border-radius: 3px;
+  opacity: 5;
+  font-family: "Raleway-SemiBold";
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .landingContent > .landingSide {
+    width: 100%;
+  }
+}

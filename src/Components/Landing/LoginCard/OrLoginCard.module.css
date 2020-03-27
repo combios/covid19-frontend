@@ -1,0 +1,44 @@
+.loginCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 3px;
+}
+
+.loginCard > input,
+.loginCard > div {
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.loginCard input {
+  border: none;
+  height: 35px;
+  min-width: 180px;
+  padding: 0px 10px;
+}
+
+.cardTitle {
+  font-family: "Raleway-Bold";
+  font-size: 30px;
+  color: #004e92;
+}
+
+.button {
+  font-family: "Raleway-Bold";
+  background-color: #004e92;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px 2px;
+  cursor: pointer;
+}
