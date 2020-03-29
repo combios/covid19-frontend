@@ -1,24 +1,26 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import styles from "Theme/theme.css"; // Import css modules stylesheet as styles
 import LandingPage from "Components/Landing/LandingPage";
-import PrivateRoute from "./PrivateRoute";
+import ReduxTest from "Components/Test/ReduxTest";
+import NoMatch from "Components/NoMatch/NoMatch";
 
 function App() {
   return (
     <Router>
-      <div className={styles.themelight}></div>
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <LandingPage />
         </Route>
-        <Route path="/signin">
+        <Route exact path="/ReduxTest">
+          <ReduxTest />
+        </Route>
+        <Route exact path="/signin">
           <LandingPage />
         </Route>
-        {/* <PrivateRoute path="/protected">
-            <LandingView />
-          </PrivateRoute> */}
+        <Route path="*">
+          <NoMatch />
+        </Route>
       </Switch>
     </Router>
   );
