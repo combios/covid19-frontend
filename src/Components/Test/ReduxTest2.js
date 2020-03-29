@@ -9,7 +9,9 @@ function ReduxTest2(props) {
   ));
   return (
     <div>
-      <button onClick={getPatients}>GET USERS</button>
+      <button onClick={getPatients}>
+        GET USERS (mapStateToProps and mapDispatchToProps
+      </button>
       <div>{renderedPatients}</div>
     </div>
   );

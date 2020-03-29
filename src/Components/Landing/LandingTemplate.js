@@ -1,5 +1,4 @@
 import React from "react";
-import { ReactComponent as Landing } from "Assets/SVG/landing.svg";
 import styles from "./Landing.module.css"; // Import css modules stylesheet as styles
 import OrgLoginCard from "./LoginCard/OrgLoginCard";
 

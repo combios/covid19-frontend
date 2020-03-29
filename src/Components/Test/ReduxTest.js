@@ -15,7 +15,9 @@ export default function ReduxTest() {
 
   return (
     <div>
-      <button onClick={getPatients}>GET USERS</button>
+      <button onClick={getPatients}>
+        GET USERS (useSelector and useDispatch)
+      </button>
       <ReduxTest2></ReduxTest2>
       <div>{renderedPatients}</div>
     </div>

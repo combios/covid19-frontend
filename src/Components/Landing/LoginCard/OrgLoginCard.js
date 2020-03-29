@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ReactComponent as Landing } from "Assets/SVG/landing.svg";
 import styles from "./OrLoginCard.module.css"; // Import css modules stylesheet as styles
 
 export default function OrgLoginCard() {
