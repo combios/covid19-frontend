@@ -1,11 +1,12 @@
 import {
   LOAD_USERS_ERROR,
   LOAD_USERS_LOADING,
-  LOAD_USERS_SUCCESS
+  SAVE_PATIENTS
 } from "../actions/types";
+
 import { initialState } from "../initialState";
 
-export default (state = initialState, action) => {
+export default (state = initialState.users, action) => {
   switch (action.type) {
     case LOAD_USERS_LOADING: {
       return {
@@ -14,10 +15,11 @@ export default (state = initialState, action) => {
         error: ""
       };
     }
-    case LOAD_USERS_SUCCESS: {
+    case SAVE_PATIENTS: {
+      console.log("action", action);
       return {
         ...state,
-        data: action.data,
+        patients: action.patients,
         loading: false
       };
     }

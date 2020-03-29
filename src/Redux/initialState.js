@@ -1,4 +1,6 @@
 export const initialState = {
-  Users: [],
+  users: {
+    patients: []
+  },
   loading: false
 };
