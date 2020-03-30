@@ -1,3 +1,7 @@
+# Sistema de ayuda para el COVID-19   
+
+User screening (at home/on demand): show a risk level and suggested next steps
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
