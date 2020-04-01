@@ -1,7 +1,7 @@
 export const mockQuestionnaire = {
   title: 'Triage 1',
   showProgressBar: 'bottom',
-  showTimerPanel: 'top',
+  showTimerPanel: false,
   firstPageIsStarted: false,
   startSurveyText: 'Evaluar condicion',
   pages: [

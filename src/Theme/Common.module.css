@@ -4,7 +4,7 @@
   font-family: 'Raleway-Bold';
   background-color: var(--active-color);
   border: none;
-  width: 100%;
+  min-width: 100px;
   border-radius: 3px;
   color: white;
   padding: 10px 30px;

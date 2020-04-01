@@ -47,14 +47,12 @@ export default function Questionnaires(props) {
             basado en Rayos X.
           </div>
           <img src={hospital} alt="hospital"></img>
-          <Link to={`${url}/2`}>
-            <button
-              className={commonStyles.button}
-              onClick={() => getQuestionnaire(2)}
-            >
-              Ir al cuestionario
-            </button>
-          </Link>
+          <button
+            className={commonStyles.button}
+            onClick={() => getQuestionnaire(2)}
+          >
+            Ir al cuestionario
+          </button>
         </div>
         <div
           className={`${styles.questionnairesMenuItem} ${styles.questionnaireCard}`}
