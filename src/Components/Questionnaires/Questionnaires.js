@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Switch, Route, Link, useRouteMatch } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import styles from './Questionnaires.module.css'; // Import css modules stylesheet as styles
 import house from 'Assets/PNG/rent.png';
 import hospital from 'Assets/PNG/health-care.png';
 import record from 'Assets/PNG/record.png';
 import commonStyles from 'Theme/Common.module.css';
-import Questionnaire from 'Components/Common/Questionnaire/Questionnaire';
 
 export default function Questionnaires() {
   let { path, url } = useRouteMatch();
@@ -53,9 +52,9 @@ export default function Questionnaires() {
           <div className={styles.questionnairesSubtitle}>Survey Test</div>
           <div className={styles.questionnairesDescription}>
             Encuesta probada por Juan Sebastián a partir de Mock data
+            proporcionado por Santiago Silva
           </div>
           <img src={record} alt="record"></img>
-
           <Link to={`${url}/survey`}>
             <button className={commonStyles.button}>Ir al cuestionario</button>
           </Link>

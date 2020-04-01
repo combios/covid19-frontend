@@ -11,7 +11,7 @@ import LandingPage from 'Components/Landing/LandingPage';
 import ReduxTest from 'Components/Test/ReduxTest';
 import NoMatch from 'Components/NoMatch/NoMatch';
 import SurveyJS from 'Components/SurveyJS/SurveyJS';
-import Questionnaires from 'Components/Questionnaires/Questionnaires';
+import Questionnaires from 'Components/Questionnaires/QuestionnairesRoutes';
 import Questionnaire from 'Components/Common/Questionnaire/Questionnaire';
 
 import { Footer } from 'Components/Common';
@@ -22,24 +22,19 @@ function App() {
         <Route exact path="/">
           <LandingPage />
         </Route>
-        <Route exact path="/ReduxTest">
+        <Route path="/ReduxTest">
           <ReduxTest />
         </Route>
-        <Route exact path="/signin">
+        <Route path="/signin">
           <LandingPage />
         </Route>
         <Route path="/survey">
           <SurveyJS />
         </Route>
-        <Route path="/questionnaires">
+        <Route path="/cuestionarios">
           <Questionnaires />
         </Route>
-        <Route
-          path={`/questionnaires/:questionnaireId`}
-          component={Questionnaire}
-        >
-          <Questionnaire />
-        </Route>
+
         <Route path="*">
           <NoMatch />
         </Route>
