@@ -80,5 +80,5 @@ body,
 #app,
 #root {
   height: 100vh;
-  margin: 0;
+  margin: auto;
 }

@@ -1,12 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from 'react-router-dom';
 import './App.css';
 import LandingPage from 'Components/Landing/LandingPage';
 import ReduxTest from 'Components/Test/ReduxTest';
 import NoMatch from 'Components/NoMatch/NoMatch';
-import PrivateRoute from './PrivateRoute';
 import SurveyJS from 'Components/SurveyJS/SurveyJS';
 import Questionnaires from 'Components/Questionnaires/Questionnaires';
+import Questionnaire from 'Components/Common/Questionnaire/Questionnaire';
+
 import { Footer } from 'Components/Common';
 function App() {
   return (
@@ -27,6 +34,9 @@ function App() {
         <Route path="/Questionnaires">
           <Questionnaires />
         </Route>
+        {/* <Route path={`${path}/:topicId`}>
+          <Questionnaire />
+        </Route> */}
         <Route path="*">
           <NoMatch />
         </Route>

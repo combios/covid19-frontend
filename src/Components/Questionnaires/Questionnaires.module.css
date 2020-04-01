@@ -37,6 +37,38 @@
   background-color: var(--light-color);
   border: 2px solid var(--secondary-color);
   height: 100%;
+  margin: auto;
+  padding: 0px 20px;
+}
+
+.questionnaireCard {
+  display: flex;
+  min-height: 300px;
+}
+
+.questionnairesMenuItem > img {
+  width: 150px;
+  margin: 10px;
+}
+
+.questionnairesSubtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway-Bold';
+  font-size: 20px;
+  width: 100%;
+  padding: 20px;
+}
+.questionnairesDescription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Raleway-Semibold';
+  font-size: 16px;
+  width: 100%;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 768px) {
@@ -45,5 +77,10 @@
   }
   .questionnairesMenuItem {
     height: auto;
+    padding: 20px;
+    width: 100%;
+  }
+  .questionnairesMenuItem > img {
+    width: 90px;
   }
 }
