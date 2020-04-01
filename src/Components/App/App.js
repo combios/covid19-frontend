@@ -7,7 +7,7 @@ import NoMatch from 'Components/NoMatch/NoMatch';
 import PrivateRoute from './PrivateRoute';
 import SurveyJS from 'Components/SurveyJS/SurveyJS';
 import Questionnaires from 'Components/Questionnaires/Questionnaires';
-
+import { Footer } from 'Components/Common';
 function App() {
   return (
     <Router>
@@ -31,6 +31,7 @@ function App() {
           <NoMatch />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

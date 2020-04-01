@@ -1,12 +1,25 @@
 .footer {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-direction: row;
+  background-color: white;
+  color: var(--secondary-color);
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .footerTitle {
   font-family: 'Raleway-Bold';
+  font-size: 20px;
+  padding-right: 20px;
 }
 
 .footerDescription {
   font-family: 'Raleway-Light';
+  color: black;
+  padding: 0px 10px;
 }

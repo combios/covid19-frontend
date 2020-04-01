@@ -25,6 +25,7 @@
   justify-content: center;
   flex-direction: row;
   background-color: white;
+  height: 100%;
 }
 
 .questionnairesMenuItem {
