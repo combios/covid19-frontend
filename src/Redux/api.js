@@ -1,9 +1,9 @@
-const API_BASE_ADDRESS = "http://dummy.restapiexample.com/api/v1";
+const API_BASE_ADDRESS = process.env.REACT_APP_API_URL;
 export default class Api {
   static getPatients() {
-    const uri = API_BASE_ADDRESS + "/employees";
+    const uri = API_BASE_ADDRESS + 'base/patients';
     return fetch(uri, {
-      method: "GET"
+      method: 'GET',
     });
   }
 }

@@ -6,6 +6,7 @@ import ReduxTest from 'Components/Test/ReduxTest';
 import NoMatch from 'Components/NoMatch/NoMatch';
 import PrivateRoute from './PrivateRoute';
 import SurveyJS from 'Components/SurveyJS/SurveyJS';
+import Questionnaires from 'Components/Questionnaires/Questionnaires';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/survey">
           <SurveyJS />
+        </Route>
+        <Route path="/Questionnaires">
+          <Questionnaires />
         </Route>
         <Route path="*">
           <NoMatch />

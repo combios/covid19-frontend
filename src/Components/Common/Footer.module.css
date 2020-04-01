@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.footerTitle {
+  font-family: 'Raleway-Bold';
+}
+
+.footerDescription {
+  font-family: 'Raleway-Light';
+}

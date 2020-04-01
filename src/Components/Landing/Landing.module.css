@@ -1,7 +1,7 @@
-@import "../../Theme/theme.css";
+@import '../../Theme/theme.css';
 
 .landing {
-  background-image: url("../../Assets/JPG/landingHealth.jpg");
+  background-image: url('../../Assets/JPG/landingHealth.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -30,17 +30,17 @@
 
 .landingLeft {
   display: flex;
+  color: white;
   background: rgb(0, 4, 40);
   background: linear-gradient(
     90deg,
     rgba(0, 4, 40, 1) 0%,
     rgba(0, 78, 146, 1) 100%
   );
-  opacity: 0.9;
 }
 
 .landingNavigator {
-  font-family: "Raleway-Bold";
+  font-family: 'Raleway-Bold';
   font-size: 30px;
   background-color: var(--main-color);
 
@@ -50,34 +50,41 @@
 
 .landingTitle {
   color: white;
-  font-family: "Raleway-Bold";
+  font-family: 'Raleway-Bold';
   font-size: 26px;
   padding: 10px;
 }
 
 .landingSubtitle {
   color: white;
-  font-family: "Raleway-SemiBold";
+  font-family: 'Raleway-SemiBold';
   font-size: 16px;
   padding-bottom: 15px;
 }
 
-.landingDescription {
-  background-color: white;
+.landingCard {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px;
-  color: var(--main-color);
   border-radius: 3px;
-  opacity: 5;
-  font-family: "Raleway-SemiBold";
+  font-family: 'Raleway-SemiBold';
   font-size: 16px;
-  padding-bottom: 15px;
+  padding: 35px;
+  width: 60%;
+}
+
+.landingDescription {
+  font-family: 'Raleway-SemiBold';
+  font-size: 16px;
+  padding: 15px 0px;
 }
 
 @media (max-width: 768px) {
   .landingContent > .landingSide {
     width: 100%;
+  }
+  .landingCard {
+    width: 90%;
   }
 }

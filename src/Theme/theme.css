@@ -1,3 +1,7 @@
 :root {
-  --main-color: #004e92;
+  --main-color: #01427a;
+  --secondary-color: #5c9ead;
+  --active-color: #004e92;
+  --hover-color: #01437c;
+  --light-color: #eceeed;
 }
