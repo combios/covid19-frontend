@@ -1,18 +1,11 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import LandingPage from 'Components/Landing/LandingPage';
 import ReduxTest from 'Components/Test/ReduxTest';
 import NoMatch from 'Components/NoMatch/NoMatch';
 import SurveyJS from 'Components/SurveyJS/SurveyJS';
-import Questionnaires from 'Components/Questionnaires/QuestionnairesRoutes';
-import Questionnaire from 'Components/Common/Questionnaire/Questionnaire';
+import Questionnaires from 'Components/Questionnaires/QuestionnairesContainer';
 
 import { Footer } from 'Components/Common';
 function App() {

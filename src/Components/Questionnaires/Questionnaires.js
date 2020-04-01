@@ -6,8 +6,9 @@ import hospital from 'Assets/PNG/health-care.png';
 import record from 'Assets/PNG/record.png';
 import commonStyles from 'Theme/Common.module.css';
 
-export default function Questionnaires() {
+export default function Questionnaires(props) {
   let { path, url } = useRouteMatch();
+  const { getQuestionnaire } = props;
 
   return (
     <div className={styles.questionnairesPageContent}>
@@ -25,9 +26,13 @@ export default function Questionnaires() {
             necesario
           </div>
           <img src={house} alt="house"></img>
-          <Link to={`${url}/triage_en_casa`}>
-            <button className={commonStyles.button}>Ir al cuestionario</button>
-          </Link>
+
+          <button
+            className={commonStyles.button}
+            onClick={() => getQuestionnaire(1)}
+          >
+            Ir al cuestionario
+          </button>
         </div>
 
         <div
@@ -42,8 +47,13 @@ export default function Questionnaires() {
             basado en Rayos X.
           </div>
           <img src={hospital} alt="hospital"></img>
-          <Link to={`${url}/triage_medicos`}>
-            <button className={commonStyles.button}>Ir al cuestionario</button>
+          <Link to={`${url}/2`}>
+            <button
+              className={commonStyles.button}
+              onClick={() => getQuestionnaire(2)}
+            >
+              Ir al cuestionario
+            </button>
           </Link>
         </div>
         <div
@@ -55,8 +65,13 @@ export default function Questionnaires() {
             proporcionado por Santiago Silva
           </div>
           <img src={record} alt="record"></img>
-          <Link to={`${url}/survey`}>
-            <button className={commonStyles.button}>Ir al cuestionario</button>
+          <Link to={`${url}/3`}>
+            <button
+              className={commonStyles.button}
+              onClick={() => getQuestionnaire(3)}
+            >
+              Ir al cuestionario
+            </button>
           </Link>
         </div>
       </div>

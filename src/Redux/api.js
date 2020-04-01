@@ -6,4 +6,10 @@ export default class Api {
       method: 'GET',
     });
   }
+  static getQuestionnaire(id) {
+    const uri = API_BASE_ADDRESS + 'definitions/questionnaires/' + id;
+    return fetch(uri, {
+      method: 'GET',
+    });
+  }
 }

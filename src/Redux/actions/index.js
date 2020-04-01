@@ -1,9 +1,10 @@
 // import counterActions from './counterActions'
-import userActions from "./userActions";
+import userActions from './userActions';
+import questionnairesActions from './questionnairesActions';
 
 const allActions = {
-  // counterActions,
-  userActions
+  questionnairesActions,
+  userActions,
 };
 
 export default allActions;

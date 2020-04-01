@@ -17,7 +17,7 @@ export default function LoginPage() {
             beatae libero nulla perferendis. Distinctio harum, est
             exercitationem obcaecati id non voluptates?
           </div>
-          <Link to="/questionnaires">
+          <Link to="/cuestionarios">
             <button className={commonStyles.button}>Ir a cuestionarios</button>
           </Link>
         </div>

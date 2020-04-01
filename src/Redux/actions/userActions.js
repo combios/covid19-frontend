@@ -1,9 +1,7 @@
 import Api from '../api';
-import { LOAD_USERS_LOADING, SAVE_PATIENTS, LOAD_USERS_ERROR } from './types';
+import { SAVE_PATIENTS, LOAD_USERS_ERROR } from './types';
 
 const getPatients = () => (dispatch) => {
-  console.log('get patients');
-  dispatch({ type: LOAD_USERS_LOADING });
   Api.getPatients()
     .then((res) => res.json())
     .then((res) => {
