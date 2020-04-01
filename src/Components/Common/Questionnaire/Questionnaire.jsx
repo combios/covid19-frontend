@@ -20,6 +20,7 @@ class SurveyJS extends Component {
     console.log('Survey results:', { survey, options, data: survey.data });
   }
   render() {
+    console.log('questionaire');
     return (
       <Survey.Survey
         model={this.model}

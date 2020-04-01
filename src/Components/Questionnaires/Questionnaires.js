@@ -5,6 +5,7 @@ import house from 'Assets/PNG/rent.png';
 import hospital from 'Assets/PNG/health-care.png';
 import record from 'Assets/PNG/record.png';
 import commonStyles from 'Theme/Common.module.css';
+import Questionnaire from 'Components/Common/Questionnaire/Questionnaire';
 
 export default function Questionnaires() {
   let { path, url } = useRouteMatch();

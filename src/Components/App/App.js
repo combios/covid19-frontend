@@ -31,12 +31,15 @@ function App() {
         <Route path="/survey">
           <SurveyJS />
         </Route>
-        <Route path="/Questionnaires">
+        <Route path="/questionnaires">
           <Questionnaires />
         </Route>
-        {/* <Route path={`${path}/:topicId`}>
+        <Route
+          path={`/questionnaires/:questionnaireId`}
+          component={Questionnaire}
+        >
           <Questionnaire />
-        </Route> */}
+        </Route>
         <Route path="*">
           <NoMatch />
         </Route>
