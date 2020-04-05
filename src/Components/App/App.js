@@ -6,7 +6,6 @@ import styles from './App.module.css';
 import LandingPage from 'Components/Landing/LandingPage';
 import ReduxTest from 'Components/Test/ReduxTest';
 import NoMatch from 'Components/NoMatch/NoMatch';
-import SurveyJS from 'Components/SurveyJS/SurveyJS';
 import Questionnaires from 'Components/Questionnaires/QuestionnairesContainer';
 
 import { Footer } from 'Components/Common';
@@ -24,9 +23,6 @@ function App() {
           </Route>
           <Route path="/signin">
             <LandingPage />
-          </Route>
-          <Route path="/survey">
-            <SurveyJS />
           </Route>
           <Route path="/cuestionarios">
             <Questionnaires />
