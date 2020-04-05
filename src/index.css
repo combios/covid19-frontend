@@ -79,6 +79,10 @@ html,
 body,
 #app,
 #root {
-  height: 100vh;
+  height: 100%;
   margin: auto;
+}
+
+div {
+  box-sizing: border-box;
 }
