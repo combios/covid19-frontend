@@ -1,8 +1,15 @@
-.page {
+.app {
   display: flex;
+  flex-direction: column;
   flex: 1;
   height: 100%;
-  padding-bottom: 60px;
+  box-sizing: border-box;
+}
+
+.appContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .App-logo {
@@ -38,4 +45,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media (max-width: 768px) {
+  .appContent {
+    height: auto;
+  }
+}
+
+@media (max-width: 400px) {
 }

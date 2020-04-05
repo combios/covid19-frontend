@@ -1,0 +1,11 @@
+.questionnairesTitle {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway-Bold';
+  font-size: 26px;
+  color: white;
+  background: var(--secondary-color);
+  padding: 20px;
+}

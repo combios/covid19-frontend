@@ -1,26 +1,22 @@
 import React, { useState } from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
-import styles from './Questionnaires.module.css'; // Import css modules stylesheet as styles
+import styles from './Menu.module.css'; // Import css modules stylesheet as styles
 import house from 'Assets/PNG/rent.png';
 import hospital from 'Assets/PNG/health-care.png';
 import record from 'Assets/PNG/record.png';
 import commonStyles from 'Theme/Common.module.css';
 
-export default function Questionnaires(props) {
+export default function MenuPage(props) {
   let { path, url } = useRouteMatch();
   const { getQuestionnaire } = props;
 
   return (
-    <div className={styles.questionnairesPageContent}>
-      <div className={styles.questionnairesTitle}>
-        Selecciona un cuestionario
-      </div>
-      <div className={styles.questionnairesMenu}>
-        <div
-          className={`${styles.questionnairesMenuItem} ${styles.questionnaireCard}`}
-        >
-          <div className={styles.questionnairesSubtitle}>Triage en casa</div>
-          <div className={styles.questionnairesDescription}>
+    <div className={styles.menuPageContent}>
+      <div className={styles.menuTitle}>Selecciona un cuestionario</div>
+      <div className={styles.menuMenu}>
+        <div className={`${styles.menuMenuItem} ${styles.questionnaireCard}`}>
+          <div className={styles.menuSubtitle}>Triage en casa</div>
+          <div className={styles.menuDescription}>
             Ingrese sus síntomas y el sistema le ayudará a tomar la decisión de
             remitirse al servicio de salud solo cuando es estrictamente
             necesario
@@ -29,19 +25,17 @@ export default function Questionnaires(props) {
 
           <button
             className={commonStyles.button}
-            onClick={() => getQuestionnaire(1)}
+            onClick={() => getQuestionnaire('TRIAGE1')}
           >
             Ir al cuestionario
           </button>
         </div>
 
-        <div
-          className={`${styles.questionnairesMenuItem} ${styles.questionnaireCard}`}
-        >
-          <div className={styles.questionnairesSubtitle}>
+        <div className={`${styles.menuMenuItem} ${styles.questionnaireCard}`}>
+          <div className={styles.menuSubtitle}>
             Triage en el servicio médico
           </div>
-          <div className={styles.questionnairesDescription}>
+          <div className={styles.menuDescription}>
             Establezca una valoración del riesgo a partir de los sintomas de un
             paciente. Triage en el servicio médico (COVID vs No COVID) que use
             basado en Rayos X.
@@ -49,16 +43,14 @@ export default function Questionnaires(props) {
           <img src={hospital} alt="hospital"></img>
           <button
             className={commonStyles.button}
-            onClick={() => getQuestionnaire(2)}
+            onClick={() => getQuestionnaire('TRIAGE2')}
           >
             Ir al cuestionario
           </button>
         </div>
-        <div
-          className={`${styles.questionnairesMenuItem} ${styles.questionnaireCard}`}
-        >
-          <div className={styles.questionnairesSubtitle}>Survey Test</div>
-          <div className={styles.questionnairesDescription}>
+        <div className={`${styles.menuMenuItem} ${styles.questionnaireCard}`}>
+          <div className={styles.menuSubtitle}>Survey Test</div>
+          <div className={styles.menuDescription}>
             Encuesta probada por Juan Sebastián a partir de Mock data
             proporcionado por Santiago Silva
           </div>

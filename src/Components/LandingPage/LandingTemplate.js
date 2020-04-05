@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Landing.module.css'; // Import css modules stylesheet as styles
 import commonStyles from 'Theme/Common.module.css';
-import OrgLoginCard from './LoginCard/OrgLoginCard';
+import Login from '../Login/LoginContainer';
 
-export default function LoginPage() {
+export default function LandingTemplate() {
   return (
     <div className={`${styles.landing} ${styles.landingContent}`}>
       <div className={`${styles.landingSide} ${styles.landingLeft}`}>
@@ -22,7 +22,9 @@ export default function LoginPage() {
           </Link>
         </div>
       </div>
-      <div className={styles.landingSide}>LOGIN HERE</div>
+      <div className={styles.landingSide}>
+        <Login />
+      </div>
     </div>
   );
 }

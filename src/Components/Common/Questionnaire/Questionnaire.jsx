@@ -40,7 +40,7 @@ export default function Questionnaire(props) {
   const model = new Survey.Model(questionnaire);
 
   useEffect(() => {
-    if (!questionnaire === undefined) {
+    if (!questionnaire) {
       console.log('GET QUESTIONNAIRE', questionnaire);
       getQuestionnaire(questionnaireId);
     }
