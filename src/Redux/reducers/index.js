@@ -1,7 +1,12 @@
-import { combineReducers } from "redux";
-import userReducer from "./userReducer"; //add this line
+import { combineReducers } from 'redux';
+import userReducer from './userReducer';
+import questionnairesReducer from './questionnairesReducer';
+import systemReducer from './systemReducer';
 
 const rootReducer = combineReducers({
-  users: userReducer //add taskreducer and name is task for future use.
+  users: userReducer,
+  system: systemReducer,
+  questionnaires: questionnairesReducer,
 });
+
 export default rootReducer;
