@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import { useDispatch } from 'react-redux';
 import actions from 'Redux/actions';
 
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { useParams, useRouteMatch } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import * as Survey from 'survey-react';
 import 'survey-react/modern.css';
-import { mockQuestionnaire } from '__mocks__/mockQuestionnaire';
 
 // apply theme modern
 Survey.StylesManager.applyTheme('modern');
@@ -22,7 +21,7 @@ export default function Questionnaire(props) {
   };
 
   const { questionnaireId } = useParams();
-  console.log(questionnaireId);
+  console.log({ questionnaireId });
   const questionnaire = useSelector(
     (state) => state.questionnaires[questionnaireId]
   );
@@ -33,6 +32,14 @@ export default function Questionnaire(props) {
    * @param {*} options function to show different messages
    */
   const onComplete = (survey, options) => {
+    dispatch(
+      actions.questionnaireResponseActions.createQuestionnaireResponse(
+        survey,
+        questionnaire,
+        options,
+        history
+      )
+    );
     console.log('Survey results:', { survey, options, data: survey.data });
   };
 

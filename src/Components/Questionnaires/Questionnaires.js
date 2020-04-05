@@ -49,7 +49,7 @@ export default function Questionnaires(props) {
           <img src={hospital} alt="hospital"></img>
           <button
             className={commonStyles.button}
-            onClick={() => getQuestionnaire(2)}
+            onClick={() => getQuestionnaire('TRIAGE1')}
           >
             Ir al cuestionario
           </button>
