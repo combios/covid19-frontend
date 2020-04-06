@@ -1,0 +1,33 @@
+.questionnairePage {
+}
+
+.questionnaireTitle {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway-Bold';
+  font-size: 26px;
+  color: white;
+  background: rgb(0, 4, 40);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 4, 40, 1) 0%,
+    rgba(0, 78, 146, 1) 100%
+  );
+  padding: 20px;
+  min-height: 80px;
+}
+
+.questionnairePageContent {
+  padding: 20px;
+  background-color: lightblue;
+}
+
+.questionnairePageContent > div {
+  background-color: white;
+}
+
+.questionnairePageContent > .sv-body .sv-completedpage {
+  background-color: white;
+}

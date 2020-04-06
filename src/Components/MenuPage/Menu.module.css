@@ -21,6 +21,7 @@
     rgba(0, 78, 146, 1) 100%
   );
   padding: 20px;
+  min-height: 80px;
 }
 
 .menuMenu {
@@ -29,6 +30,7 @@
   justify-content: center;
   flex-direction: row;
   height: 100%;
+  flex: 1;
 }
 
 .menuMenuItem {

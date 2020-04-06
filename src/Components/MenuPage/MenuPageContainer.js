@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import actions from 'Redux/actions';
 import Menu from './Menu';
-import Questionnaire from 'Components/Common/Questionnaire/Questionnaire';
+import QuestionnaireContainer from 'Components/QuestionnairePage/QuestionnaireContainer';
 
 export default function MenuContainer() {
   const dispatch = useDispatch();
@@ -12,6 +12,7 @@ export default function MenuContainer() {
   const history = useHistory();
 
   const getQuestionnaire = (id) => {
+    console.log('getqUESTIONAIRE');
     dispatch(actions.questionnairesActions.getQuestionnaire(id, history));
   };
   return (
@@ -20,7 +21,7 @@ export default function MenuContainer() {
         <Menu getQuestionnaire={getQuestionnaire} />
       </Route>
       <Route path={`${path}/:questionnaireId`}>
-        <Questionnaire />
+        <QuestionnaireContainer />
       </Route>
     </Switch>
   );

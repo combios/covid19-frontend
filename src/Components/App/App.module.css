@@ -1,15 +1,16 @@
 .app {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   flex: 1;
   height: 100%;
-  box-sizing: border-box;
 }
 
 .appContent {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  height: 100%;
+  min-height: auto;
 }
 
 .App-logo {

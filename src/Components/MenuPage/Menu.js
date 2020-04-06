@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
 import styles from './Menu.module.css'; // Import css modules stylesheet as styles
 import house from 'Assets/PNG/rent.png';
@@ -7,7 +7,7 @@ import record from 'Assets/PNG/record.png';
 import commonStyles from 'Theme/Common.module.css';
 
 export default function MenuPage(props) {
-  let { path, url } = useRouteMatch();
+  let { url } = useRouteMatch();
   const { getQuestionnaire } = props;
 
   return (

@@ -1,6 +1,4 @@
 import Api from '../api';
-import { useParams } from 'react-router-dom';
-
 import { SET_LOADING, SAVE_QUESTIONNAIRE } from './types';
 import { toast } from 'react-toastify';
 
