@@ -3,7 +3,6 @@ import { SAVE_PATIENTS, LOAD_USERS_ERROR } from './types';
 
 const getPatients = () => (dispatch) => {
   Api.getPatients()
-    .then((res) => res.json())
     .then((res) => {
       console.log('res', res);
       if (res.error) {

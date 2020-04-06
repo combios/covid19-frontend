@@ -1,13 +1,11 @@
 import Api from '../api';
-import { useParams } from 'react-router-dom';
 
 import { SET_LOADING, SAVE_QUESTIONNAIRE } from './types';
 import { toast } from 'react-toastify';
 
-const getQuestionnaire = (id, history) => (dispatch) => {
+const getQuestionnaire = (id, history) => async (dispatch) => {
   dispatch({ type: SET_LOADING, name: 'page', value: true });
-  Api.getQuestionnaire(id)
-    .then((res) => res.json())
+  await Api.getQuestionnaire(id)
     .then((res) => {
       console.log('history', history);
       if (res.error) {
