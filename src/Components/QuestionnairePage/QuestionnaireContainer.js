@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react';
-
 import { useDispatch } from 'react-redux';
 import actions from 'Redux/actions';
-
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import * as Survey from 'survey-react';
 import 'survey-react/modern.css';
-
+import Questionnaire from './Questionnaire';
 // apply theme modern
 Survey.StylesManager.applyTheme('modern');
 
-export default function Questionnaire(props) {
+export default function QuestionnaireContainer(props) {
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -21,7 +19,7 @@ export default function Questionnaire(props) {
   };
 
   const { questionnaireId } = useParams();
-  console.log({ questionnaireId });
+  console.log(questionnaireId);
   const questionnaire = useSelector(
     (state) => state.questionnaires[questionnaireId]
   );
@@ -47,12 +45,18 @@ export default function Questionnaire(props) {
   const model = new Survey.Model(questionnaire);
 
   useEffect(() => {
-    if (!questionnaire === undefined) {
+    if (!questionnaire) {
       console.log('GET QUESTIONNAIRE', questionnaire);
       getQuestionnaire(questionnaireId);
     }
     return () => {};
   });
 
-  return <Survey.Survey model={model} onComplete={onComplete} locale="es" />;
+  return questionnaire ? (
+    <Questionnaire
+      model={model}
+      onComplete={onComplete}
+      questionnaire={questionnaire}
+    ></Questionnaire>
+  ) : null;
 }

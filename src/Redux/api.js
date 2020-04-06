@@ -7,6 +7,7 @@ export default class Api {
     return Axios.get(uri).then((res) => res.data);
   }
   static getQuestionnaire(id) {
+    console.log('getQuestionnaire request', id);
     const uri = API_BASE_ADDRESS + 'definitions/questionnaires/' + id;
     return Axios.get(uri).then((res) => res.data);
   }

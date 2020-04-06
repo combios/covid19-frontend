@@ -1,57 +1,62 @@
 @import '../../Theme/theme.css';
 
-.questionnairesPageContent {
+.menuPageContent {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  height: 100%;
-  position: relative;
 }
 
-.questionnairesTitle {
+.menuTitle {
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
   font-family: 'Raleway-Bold';
   font-size: 26px;
   color: white;
-  width: 100%;
-  background: var(--secondary-color);
-  padding: 30px;
+  background: rgb(0, 4, 40);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 4, 40, 1) 0%,
+    rgba(0, 78, 146, 1) 100%
+  );
+  padding: 20px;
+  min-height: 80px;
 }
 
-.questionnairesMenu {
+.menuMenu {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  background-color: white;
   height: 100%;
+  flex: 1;
 }
 
-.questionnairesMenuItem {
+.menuMenuItem {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: var(--light-color);
-  border: 2px solid var(--secondary-color);
+  border-left: 2px solid snow;
+  border-right: 2px solid snow;
   height: 100%;
-  margin: auto;
-  padding: 0px 20px;
 }
 
 .questionnaireCard {
   display: flex;
   min-height: 300px;
+  padding: 20px;
 }
 
-.questionnairesMenuItem > img {
+.menuMenuItem > img {
   width: 150px;
   margin: 10px;
 }
 
-.questionnairesSubtitle {
+.menuSubtitle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +66,7 @@
   width: 100%;
   padding: 20px;
 }
-.questionnairesDescription {
+.menuDescription {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,15 +79,18 @@
 }
 
 @media (max-width: 768px) {
-  .questionnairesMenu {
+  .menuMenu {
     flex-direction: column;
   }
-  .questionnairesMenuItem {
+  .menuMenuItem {
     height: auto;
-    padding: 20px;
     width: 100%;
+    padding: 20px;
+    border: none;
+    border-top: 2px solid snow;
+    border-left: 2px solid snow;
   }
-  .questionnairesMenuItem > img {
+  .menuMenuItem > img {
     width: 90px;
   }
 }

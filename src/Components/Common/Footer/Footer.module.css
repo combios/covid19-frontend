@@ -6,10 +6,6 @@
   background-color: white;
   color: var(--secondary-color);
   padding: 20px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
 }
 
 .footerTitle {

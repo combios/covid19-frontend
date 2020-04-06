@@ -1,0 +1,11 @@
+.sv-container-modern__title {
+  display: none;
+}
+
+.sv-page.sv-body__page {
+  padding: 20px;
+}
+
+.sv-completedpage {
+  background-color: white;
+}

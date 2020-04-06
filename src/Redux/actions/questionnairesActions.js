@@ -1,5 +1,4 @@
 import Api from '../api';
-
 import { SET_LOADING, SAVE_QUESTIONNAIRE } from './types';
 import { toast } from 'react-toastify';
 
@@ -26,7 +25,7 @@ const getQuestionnaire = (id, history) => async (dispatch) => {
       return;
     })
     .catch((error) => {
-      console.log('error', error);
+      toast.error('Cuestionario no disponible');
     });
   dispatch({ type: SET_LOADING, name: 'page', value: false });
 };

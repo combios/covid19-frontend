@@ -1,0 +1,51 @@
+.questionnairePage {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.questionnairePage > .sv-root-modern {
+  padding: 20px;
+}
+
+.questionnairePage > .sv-title.sv-container-modern__title {
+  display: none;
+}
+
+.questionnaireTitle {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway-Bold';
+  font-size: 26px;
+  color: white;
+  background: rgb(0, 4, 40);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 4, 40, 1) 0%,
+    rgba(0, 78, 146, 1) 100%
+  );
+  padding: 20px;
+  min-height: 80px;
+}
+
+.questionnairesubTitle {
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.questionnairePageContent {
+  padding: 20px;
+  background-color: lightblue;
+  height: 100%;
+}
+
+.questionnairePageContent > div {
+  background-color: white;
+}
+
+.questionnairePageContent > .sv-body .sv-completedpage {
+  background-color: white;
+}
