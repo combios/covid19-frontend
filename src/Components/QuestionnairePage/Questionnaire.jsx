@@ -12,6 +12,9 @@ export default function Questionnaire(props) {
     <div className={styles.questionnairePage}>
       <div className={styles.questionnaireTitle}>
         {props.questionnaire.title || 'Cuestionario'}
+        <div className={styles.questionnairesubTitle}>
+          {props.questionnaire.description || null}
+        </div>
       </div>
       <div className={styles.questionnairePageContent}>
         <Survey.Survey

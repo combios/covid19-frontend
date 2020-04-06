@@ -30,6 +30,14 @@ export default function QuestionnaireContainer(props) {
    * @param {*} options function to show different messages
    */
   const onComplete = (survey, options) => {
+    dispatch(
+      actions.questionnaireResponseActions.createQuestionnaireResponse(
+        survey,
+        questionnaire,
+        options,
+        history
+      )
+    );
     console.log('Survey results:', { survey, options, data: survey.data });
   };
 
