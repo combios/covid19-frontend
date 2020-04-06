@@ -1,4 +1,15 @@
 .questionnairePage {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.questionnairePage > .sv-root-modern {
+  padding: 20px;
+}
+
+.questionnairePage > .sv-title.sv-container-modern__title {
+  display: none;
 }
 
 .questionnaireTitle {
@@ -22,6 +33,7 @@
 .questionnairePageContent {
   padding: 20px;
   background-color: lightblue;
+  height: 100%;
 }
 
 .questionnairePageContent > div {

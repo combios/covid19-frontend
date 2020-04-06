@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Survey from 'survey-react';
 import 'survey-react/modern.css';
-
+import './questionnaireCustomStyles.css';
 import styles from './Questionnaire.module.css';
 // apply theme modern
 Survey.StylesManager.applyTheme('modern');
