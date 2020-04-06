@@ -25,7 +25,7 @@ const getQuestionnaire = (id, history) => async (dispatch) => {
       return;
     })
     .catch((error) => {
-      console.log('error', error);
+      toast.error('Cuestionario no disponible');
     });
   dispatch({ type: SET_LOADING, name: 'page', value: false });
 };

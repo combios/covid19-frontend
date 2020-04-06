@@ -55,14 +55,12 @@ export default function MenuPage(props) {
             proporcionado por Santiago Silva
           </div>
           <img src={record} alt="record"></img>
-          <Link to={`${url}/3`}>
-            <button
-              className={commonStyles.button}
-              onClick={() => getQuestionnaire(3)}
-            >
-              Ir al cuestionario
-            </button>
-          </Link>
+          <button
+            className={commonStyles.button}
+            onClick={() => getQuestionnaire('TRIAGE3')}
+          >
+            Ir al cuestionario
+          </button>
         </div>
       </div>
     </div>

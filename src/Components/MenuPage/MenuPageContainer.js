@@ -12,7 +12,6 @@ export default function MenuContainer() {
   const history = useHistory();
 
   const getQuestionnaire = (id) => {
-    console.log('getqUESTIONAIRE');
     dispatch(actions.questionnairesActions.getQuestionnaire(id, history));
   };
   return (
