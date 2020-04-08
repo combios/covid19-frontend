@@ -21,12 +21,12 @@ import { toast } from 'react-toastify';
 function surveyDataToQuestionnaireResponse(data, questionnaire) {
   return {
     questionnaire: questionnaire.id,
-    patient: '1', // 'FIXME: NO_AUTH_IMPLEMENTED',
+    patient: '8b559272-b3e8-475e-a068-e9d8ff5dfbeb', // 'FIXME: NO_AUTH_IMPLEMENTED',
     authored: new Date(),
     answers: Object.keys(data).reduce(
       (dictionary, key, index) => ({
         ...dictionary,
-        [`question-${index + 1}`]: data[key],
+        [`question${index + 1}`]: data[key],
       }),
       {}
     ),
