@@ -20,12 +20,12 @@ import { toast } from 'react-toastify';
  */
 function surveyDataToQuestionnaireResponse(data, questionnaire) {
   return {
-    questionnaire_id: questionnaire.code,
-    patient_id: 'FIXME: NO_AUTH_IMPLEMENTED',
+    questionnaire: questionnaire.id,
+    patient: '8b559272-b3e8-475e-a068-e9d8ff5dfbeb', // 'FIXME: NO_AUTH_IMPLEMENTED',
     authored: new Date(),
     answers: Object.keys(data).reduce(
-      (diccionary, key, index) => ({
-        ...diccionary,
+      (dictionary, key, index) => ({
+        ...dictionary,
         [`question${index + 1}`]: data[key],
       }),
       {}
@@ -39,8 +39,6 @@ export const createQuestionnaireResponse = (
   options,
   history
 ) => async (dispatch) => {
-  debugger;
-
   const { data } = survey;
   const questionnaireResponse = surveyDataToQuestionnaireResponse(
     data,
